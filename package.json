@@ -1,6 +1,6 @@
 {
   "name": "CASEntertainment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "env:dev": "cp ./environments/.env.development .env",
