@@ -3,12 +3,34 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "env:dev": "cp ./environments/.env.development .env",
+    "env:prod": "cp ./environments/.env.production .env",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "reset:cache": "react-native start --reset-cache",
+    "test": "jest --config jest.config.json --forceExit --detectOpenHandles --logHeapUsage --no-cache",
+    "test:watch": "npm test -- --verbose --watch",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "npm run lint -- --fix --cache",
+    "release": "standard-version -a"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:Alver23/cas-entertainment-app-mobile.git"
+  },
+  "keywords": [
+    "cast",
+    "entertainment",
+    "artists",
+    "events"
+  ],
+  "author": "Alver Grisales <viga.23@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Alver23/cas-entertainment-app-mobile/issues"
+  },
+  "homepage": "https://github.com/Alver23/cas-entertainment-app-mobile#readme",
   "dependencies": {
     "react": "16.13.1",
     "react-native": "0.63.2"
@@ -16,29 +38,48 @@
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/eslint-config": "^1.1.0",
+    "@types/axios": "^0.14.0",
     "@types/jest": "^25.2.3",
     "@types/react-native": "^0.63.2",
     "@types/react-test-renderer": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "babel-jest": "^25.1.0",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
+    "enzyme-to-json": "^3.5.0",
     "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-react": "^7.20.6",
+    "husky": "^4.2.5",
     "jest": "^25.1.0",
+    "lint-staged": "^10.2.11",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-test-renderer": "16.13.1",
     "prettier": "^2.0.4",
+    "react-test-renderer": "16.13.1",
+    "standard-version": "^9.0.0",
     "typescript": "^3.8.3"
   },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,json,tsx}": [
+      "prettier --write --config .prettierrc.js",
+      "git add --force"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
     ]
   }
 }
