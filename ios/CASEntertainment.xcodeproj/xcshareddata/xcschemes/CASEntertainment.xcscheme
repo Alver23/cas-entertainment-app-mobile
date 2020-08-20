@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "casEntertainmentApp.app"
-               BlueprintName = "casEntertainmentApp"
-               ReferencedContainer = "container:casEntertainmentApp.xcodeproj">
+               BuildableName = "CASEntertainment.app"
+               BlueprintName = "CASEntertainment"
+               ReferencedContainer = "container:CASEntertainment.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "casEntertainmentAppTests.xctest"
-               BlueprintName = "casEntertainmentAppTests"
-               ReferencedContainer = "container:casEntertainmentApp.xcodeproj">
+               BuildableName = "CASEntertainmentTests.xctest"
+               BlueprintName = "CASEntertainmentTests"
+               ReferencedContainer = "container:CASEntertainment.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "casEntertainmentApp.app"
-            BlueprintName = "casEntertainmentApp"
-            ReferencedContainer = "container:casEntertainmentApp.xcodeproj">
+            BuildableName = "CASEntertainment.app"
+            BlueprintName = "CASEntertainment"
+            ReferencedContainer = "container:CASEntertainment.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "casEntertainmentApp.app"
-            BlueprintName = "casEntertainmentApp"
-            ReferencedContainer = "container:casEntertainmentApp.xcodeproj">
+            BuildableName = "CASEntertainment.app"
+            BlueprintName = "CASEntertainment"
+            ReferencedContainer = "container:CASEntertainment.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
