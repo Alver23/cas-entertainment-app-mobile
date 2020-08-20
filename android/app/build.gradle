@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.casentertainmentapp"
+        applicationId "com.casentertainment.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
