@@ -10,6 +10,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   extends: [
     'airbnb-base',
+    'plugin:prettier/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
@@ -17,10 +18,13 @@ module.exports = {
   ],
   rules: {
     'import/no-unresolved': 'off',
+    'max-len': ['error', { 'code': 140 }],
+    'prettier/prettier': 1,
+    'import/extensions': 'off'
   },
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  'parserOptions': {
+    'ecmaFeatures': {
+      'jsx': true,
     }
   }
 };
