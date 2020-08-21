@@ -1,11 +1,13 @@
 {
   "preset": "react-native",
   "roots": ["<rootDir>/src/"],
-  "testMatch": ["**/+(*.)+(spec).+(ts)"],
+  "testMatch": ["<rootDir>/src/**/+(*.)+(spec).+(tsx|ts)"],
   "collectCoverage": true,
-  "collectCoverageFrom": ["**/*ts", "!**/*-mock.ts"],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}"
+  ],
   "coverageDirectory": "coverage",
-  "setupFiles": ["./jest/setup.js"],
+  "setupFiles": ["<rootDir>/jest/setup.js"],
   "moduleFileExtensions": [
     "ts",
     "tsx",
@@ -14,9 +16,11 @@
     "json",
     "node"
   ],
-  "globals": {
-    "ts-jest": {
-      "tsConfig": "./tsconfig.spec.json"
-    }
-  }
+  "transformIgnorePatterns": [
+    "node_modules/(?!(react-native)/)"
+  ],
+  "snapshotSerializers": ["enzyme-to-json/serializer"],
+  "coveragePathIgnorePatterns": [
+    "src/core"
+  ]
 }
