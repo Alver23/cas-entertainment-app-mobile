@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.0.0...v1.1.0) (2020-08-21)
+
+
+### Features
+
+* add configuration for i18n ([#3](https://github.com/Alver23/cas-entertainment-app-mobile/issues/3)) ([fb90109](https://github.com/Alver23/cas-entertainment-app-mobile/commit/fb90109b58170191db1dcbe2055fea4f065e86c1))
+* add travis configuration and coverall ([#4](https://github.com/Alver23/cas-entertainment-app-mobile/issues/4)) ([6d701c5](https://github.com/Alver23/cas-entertainment-app-mobile/commit/6d701c55f09eac892bc14b6955ea40addf080433))
+
 ## [1.0.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v0.0.3...v1.0.0) (2020-08-20)
 
 ### [0.0.3](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v0.0.2...v0.0.3) (2020-08-20)
