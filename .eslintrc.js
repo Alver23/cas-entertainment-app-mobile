@@ -20,7 +20,8 @@ module.exports = {
     'import/no-unresolved': 'off',
     'max-len': ['error', { 'code': 140 }],
     'prettier/prettier': 1,
-    'import/extensions': 'off'
+    'import/extensions': 'off',
+    'import/no-extraneous-dependencies': [ 'error', { 'devDependencies': true } ],
   },
   'parserOptions': {
     'ecmaFeatures': {
