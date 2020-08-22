@@ -1,0 +1,11 @@
+{
+  "item": {
+    "image": {
+      "source": {
+        "uri": "123"
+      }
+    },
+    "title": "Title",
+    "text": "text"
+  }
+}

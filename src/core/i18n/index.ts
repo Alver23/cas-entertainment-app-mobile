@@ -13,7 +13,7 @@ const translationsKeys = Object.keys(I18n.translations);
 const { languageTag } = RNLocalize.findBestAvailableLanguage(translationsKeys) || fallback;
 I18n.locale = languageTag;
 
-I18n.defineMessages = (messages, locale = 'en') => {
+I18n.defineMessages = (messages, locale = 'en'): void => {
   Object.assign(I18n.translations[locale], messages);
 };
 
@@ -21,7 +21,7 @@ I18n.defineMessages = (messages, locale = 'en') => {
  * Switch the language.
  * @param { string } locale The locale to switch.
  */
-I18n.switchLanguage = (locale) => {
+I18n.switchLanguage = (locale): void => {
   I18n.locale = locale;
 };
 

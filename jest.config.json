@@ -4,7 +4,8 @@
   "testMatch": ["<rootDir>/src/**/+(*.)+(spec).+(tsx|ts)"],
   "collectCoverage": true,
   "collectCoverageFrom": [
-    "src/**/*.{js,jsx,ts,tsx}"
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/**/*-interface.ts"
   ],
   "coverageDirectory": "coverage",
   "setupFiles": ["<rootDir>/jest/setup.js"],
@@ -15,9 +16,6 @@
     "jsx",
     "json",
     "node"
-  ],
-  "transformIgnorePatterns": [
-    "node_modules/(?!(react-native)/)"
   ],
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "coveragePathIgnorePatterns": [

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppIntro container should rendering correctly 1`] = `
+<AppIntroSlider
+  activeDotStyle={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  bottomButton={true}
+  data={
+    Array [
+      Object {
+        "image": Object {
+          "testUri": "../../../src/containers/app-intro/assets/one.png",
+        },
+        "key": "one",
+        "text": "Lorem ipsum dolor sit amet.",
+        "title": "PRACTISE",
+      },
+      Object {
+        "image": Object {
+          "testUri": "../../../src/containers/app-intro/assets/two.png",
+        },
+        "key": "two",
+        "text": "Lorem ipsum dolor sit amet.",
+        "title": "HEALTHY",
+      },
+      Object {
+        "image": Object {
+          "testUri": "../../../src/containers/app-intro/assets/three.png",
+        },
+        "key": "three",
+        "text": "Lorem ipsum dolor sit amet.",
+        "title": "EVERYDAY",
+      },
+    ]
+  }
+  doneLabel="Done"
+  dotClickEnabled={true}
+  dotStyle={
+    Object {
+      "backgroundColor": undefined,
+    }
+  }
+  nextLabel="Next"
+  onSlideChange={[Function]}
+  prevLabel="Back"
+  renderDoneButton={[Function]}
+  renderItem={[Function]}
+  renderNextButton={[Function]}
+  showDoneButton={true}
+  showNextButton={true}
+  showPrevButton={false}
+  showSkipButton={true}
+  skipLabel="Saltar"
+/>
+`;
