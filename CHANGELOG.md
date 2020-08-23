@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.1.0...v1.2.0) (2020-08-23)
+
+
+### Features
+
+* add app intro container ([#5](https://github.com/Alver23/cas-entertainment-app-mobile/issues/5)) ([f3d7f48](https://github.com/Alver23/cas-entertainment-app-mobile/commit/f3d7f48259281c6abf448ba2a148a0105447c913))
+
 ## [1.1.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.0.0...v1.1.0) (2020-08-21)
 
 
