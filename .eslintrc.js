@@ -9,6 +9,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   extends: [
+    'plugin:@typescript-eslint/recommended',
     'airbnb-base',
     'plugin:prettier/recommended',
     'plugin:import/errors',
@@ -22,6 +23,7 @@ module.exports = {
     'prettier/prettier': 1,
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': [ 'error', { 'devDependencies': true } ],
+    '@typescript-eslint/interface-name-prefix': [ 'error', { 'prefixWithI': 'always' }],
   },
   'parserOptions': {
     'ecmaFeatures': {

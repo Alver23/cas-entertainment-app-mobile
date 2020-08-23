@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item component should rendering correctly 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "paddingBottom": 96,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "source": Object {
+            "uri": "123",
+          },
+        }
+      }
+      style={
+        Object {
+          "height": 667,
+          "marginBottom": 32,
+          "resizeMode": "contain",
+        }
+      }
+    />
+    <Themed.Text
+      h4={true}
+    >
+      Title
+    </Themed.Text>
+    <Themed.Text>
+      text
+    </Themed.Text>
+  </View>
+</View>
+`;
