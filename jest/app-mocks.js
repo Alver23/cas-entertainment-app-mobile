@@ -7,3 +7,15 @@ jest.mock('@core/i18n', () => {
     t: jest.fn((k, o) => i18njs.t(k, o)),
   };
 });
+
+// Mocking react native restart
+jest.mock('react-native-restart', () => ({
+  Restart: jest.fn(),
+}));
+
+// Mocking react native sensitive info
+jest.mock('react-native-sensitive-info', () => ({
+  setItem: jest.fn(),
+  deleteItem: jest.fn(),
+  getItem: jest.fn(),
+}));

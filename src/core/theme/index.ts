@@ -1,6 +1,6 @@
 // Dependencies
 import { Platform } from 'react-native';
-import { ButtonProps, Colors, TextProps } from 'react-native-elements';
+import { FullTheme, Colors } from 'react-native-elements';
 
 const blue1 = '#0B132A';
 const white = '#ffffff';
@@ -19,13 +19,24 @@ const fontFamily = {
 };
 
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
-type ColorTypes = RecursivePartial<Colors> & { white: string; blue1: string; blue2: string };
-export const theme: Partial<{ colors: RecursivePartial<ColorTypes>; Text: Partial<TextProps>; Button: Partial<ButtonProps> }> = {
+export type ColorTypes = RecursivePartial<Colors> & { white: string; blue1: string; blue2: string; transparent: string };
+
+const customColors = {
+  white: '#ffffff',
+  blue1: '#0B132A',
+  blue2: '#186AA5',
+  transparent: '#F5FCFF88',
+  color1: '#495057',
+  red: 'red',
+};
+
+export interface ITheme extends FullTheme {
+  colors: RecursivePartial<ColorTypes>;
+}
+export const theme: Partial<ITheme> = {
   colors: {
-    white,
-    blue1,
     primary: '#15E1CA',
-    blue2: '#186AA5',
+    ...customColors,
   },
   Text: {
     style: {
@@ -49,6 +60,26 @@ export const theme: Partial<{ colors: RecursivePartial<ColorTypes>; Text: Partia
       color: blue1,
       fontSize: 17,
       ...fontFamily,
+    },
+  },
+  Input: {
+    containerStyle: {
+      alignItems: 'center',
+    },
+    inputContainerStyle: [
+      {
+        borderWidth: 2,
+        borderRadius: 5,
+        borderColor: customColors.blue2,
+        paddingHorizontal: 10,
+        height: 48,
+        width: 312,
+        backgroundColor: customColors.white,
+      },
+    ],
+    inputStyle: {
+      fontSize: 17,
+      color: customColors.color1,
     },
   },
 };

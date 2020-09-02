@@ -1,5 +1,5 @@
 // Hooks
-import { makeStyles } from '@hooks/index';
+import { makeStyles } from '@hooks/theme';
 
 const styles = makeStyles(({ colors }) => ({
   slide: {

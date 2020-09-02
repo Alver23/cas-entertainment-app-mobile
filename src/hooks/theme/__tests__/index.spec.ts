@@ -2,6 +2,7 @@
 import React from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 
+// Hooks
 import { useTheme, makeStyles } from '../index';
 
 describe('Hooks Theme', () => {

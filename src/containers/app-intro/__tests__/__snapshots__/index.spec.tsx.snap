@@ -44,6 +44,7 @@ exports[`AppIntro container should rendering correctly 1`] = `
     }
   }
   nextLabel="Next"
+  onSkip={[Function]}
   onSlideChange={[Function]}
   prevLabel="Back"
   renderDoneButton={[Function]}
@@ -53,6 +54,6 @@ exports[`AppIntro container should rendering correctly 1`] = `
   showNextButton={true}
   showPrevButton={false}
   showSkipButton={true}
-  skipLabel="Saltar"
+  skipLabel="Skip"
 />
 `;

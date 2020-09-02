@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoaderView component should save a snapshot of the component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": undefined,
+        "bottom": 0,
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "zIndex": 3,
+      },
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "padding": 10,
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    animating={true}
+    color="#2089dc"
+    hidesWhenStopped={true}
+    size="large"
+  />
+  <StatusBar
+    animated={false}
+    barStyle="dark-content"
+    showHideTransition="fade"
+  />
+</View>
+`;

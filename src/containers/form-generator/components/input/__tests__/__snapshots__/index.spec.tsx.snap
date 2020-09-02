@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputForm should render correctly 1`] = `
+<ForwardRef(Themed.Input)
+  errorMessage="fake mssage"
+  inputContainerStyle={
+    Array [
+      Object {
+        "borderColor": "red",
+      },
+    ]
+  }
+  onBlur={[MockFunction]}
+  onChangeText={[MockFunction]}
+  placeholder="fake placeholder"
+  value="fake value"
+/>
+`;

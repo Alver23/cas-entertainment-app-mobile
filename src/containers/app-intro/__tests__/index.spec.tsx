@@ -1,24 +1,29 @@
 // Dependencies
 import React, { Dispatch } from 'react';
-import { shallow } from 'enzyme';
+import { shallow, ShallowWrapper } from 'enzyme';
 import AppIntroSlider from 'react-native-app-intro-slider';
 
-import AppIntro from '../index';
+// Components
+import { AppIntro } from '../index';
 
 // Mocks
 import itemMocks from '../components/item/__tests__/mocks.json';
 
 describe('AppIntro container', () => {
-  let component;
+  let component: ShallowWrapper;
 
   const mockRef = { current: { goToSlide: jest.fn() } };
+
+  const props = {
+    onSkip: (): jest.Mock => jest.fn(),
+  };
 
   const mockState: [unknown, Dispatch<Function>] = [1, jest.fn()];
 
   beforeEach(() => {
     jest.spyOn(React, 'useState').mockReturnValueOnce(mockState);
     jest.spyOn(React, 'useRef').mockReturnValue(mockRef);
-    component = shallow(<AppIntro />);
+    component = shallow(<AppIntro {...props} />);
   });
 
   it('should rendering correctly', () => {

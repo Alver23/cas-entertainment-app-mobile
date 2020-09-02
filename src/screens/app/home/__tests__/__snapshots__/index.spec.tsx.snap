@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppStack should render correctly 1`] = `
+<View>
+  <Themed.Text>
+    HomeScreen
+  </Themed.Text>
+  <ForwardRef(Themed.Button)
+    onPress={[MockFunction]}
+    title="Logout"
+  />
+</View>
+`;

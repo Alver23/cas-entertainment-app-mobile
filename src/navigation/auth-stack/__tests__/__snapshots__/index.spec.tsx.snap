@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthStack should render correctly 1`] = `
+<ForwardRef(NavigationContainer)>
+  <StackNavigator
+    headerMode="none"
+  >
+    <Screen
+      component={[Function]}
+      name="Login"
+    />
+  </StackNavigator>
+</ForwardRef(NavigationContainer)>
+`;

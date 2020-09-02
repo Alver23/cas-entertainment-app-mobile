@@ -1,5 +1,5 @@
 // Hooks
-import { makeStyles } from '@hooks/index';
+import { makeStyles } from '@hooks/theme';
 
 // Commons
 import { SCREEN_HEIGHT } from '@commons/app';

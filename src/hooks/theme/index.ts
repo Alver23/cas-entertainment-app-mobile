@@ -3,7 +3,10 @@ import React from 'react';
 import StyleSheet from 'react-native/Libraries/StyleSheet/StyleSheet';
 import { ThemeContext } from 'react-native-elements';
 
-export const useTheme = (): Partial<{}> => {
+// Core
+import { ITheme } from '@core/theme';
+
+export const useTheme = (): Partial<ITheme> => {
   const { theme } = React.useContext(ThemeContext);
   return theme;
 };

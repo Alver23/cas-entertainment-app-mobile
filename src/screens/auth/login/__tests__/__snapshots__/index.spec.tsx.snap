@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginScreen should render correctly 1`] = `
+<LayoutView
+  style={
+    Object {
+      "justifyContent": "center",
+    }
+  }
+>
+  <Memo(Component) />
+  <mockConstructor />
+</LayoutView>
+`;
