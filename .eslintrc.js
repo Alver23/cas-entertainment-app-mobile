@@ -24,6 +24,10 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': [ 'error', { 'devDependencies': true } ],
     '@typescript-eslint/interface-name-prefix': [ 'error', { 'prefixWithI': 'always' }],
+    'class-methods-use-this': 0,
+    'import/prefer-default-export': 'off',
+    'no-useless-constructor': 0,
+    'no-empty-function': 'off',
   },
   'parserOptions': {
     'ecmaFeatures': {

@@ -1,13 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App Component renders correctly 1`] = `
-<Fragment>
-  <StatusBar
-    animated={false}
-    backgroundColor="#0B132A"
-    barStyle="light-content"
-    showHideTransition="fade"
-  />
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
   <ThemeProvider
     theme={
       Object {
@@ -25,6 +29,26 @@ exports[`App Component renders correctly 1`] = `
             "fontSize": 17,
           },
         },
+        "Input": Object {
+          "containerStyle": Object {
+            "alignItems": "center",
+          },
+          "inputContainerStyle": Array [
+            Object {
+              "backgroundColor": "#ffffff",
+              "borderColor": "#186AA5",
+              "borderRadius": 5,
+              "borderWidth": 2,
+              "height": 48,
+              "paddingHorizontal": 10,
+              "width": 312,
+            },
+          ],
+          "inputStyle": Object {
+            "color": "#495057",
+            "fontSize": 17,
+          },
+        },
         "Text": Object {
           "h4Style": Object {
             "fontSize": 30,
@@ -38,22 +62,33 @@ exports[`App Component renders correctly 1`] = `
         "colors": Object {
           "blue1": "#0B132A",
           "blue2": "#186AA5",
+          "color1": "#495057",
           "primary": "#15E1CA",
+          "red": "red",
+          "transparent": "#F5FCFF88",
           "white": "#ffffff",
         },
       }
     }
   >
-    <ForwardRef(SafeAreaView)
-      style={
-        Object {
-          "backgroundColor": "#0B132A",
-          "flex": 1,
+    <mockConstructor>
+      <ForwardRef(SafeAreaView)
+        style={
+          Object {
+            "backgroundColor": "#0B132A",
+            "flex": 1,
+          }
         }
-      }
-    >
-      <AppIntro />
-    </ForwardRef(SafeAreaView)>
+      >
+        <StatusBar
+          animated={false}
+          backgroundColor="#0B132A"
+          barStyle="light-content"
+          showHideTransition="fade"
+        />
+        <mockConstructor />
+      </ForwardRef(SafeAreaView)>
+    </mockConstructor>
   </ThemeProvider>
-</Fragment>
+</Provider>
 `;

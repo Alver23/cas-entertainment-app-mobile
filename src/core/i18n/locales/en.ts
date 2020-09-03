@@ -1,9 +1,12 @@
 // Translations
-import appIntroMessages from '@containers/app-intro/messages';
+import appIntroTranslations from '@containers/app-intro/messages';
+import loginTranslations from '@containers/login-form/messages';
 
 export default {
-  ...appIntroMessages.en,
+  ...appIntroTranslations.en,
+  ...loginTranslations.en,
   commons: {
-    hello: 'Hi alver',
+    submitButtonTitle: 'Guardar',
+    cancelButtonTitle: 'Cancelar',
   },
 };

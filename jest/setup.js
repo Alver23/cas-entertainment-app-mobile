@@ -4,5 +4,4 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import './app-mocks'
 
-
 Enzyme.configure({ adapter: new Adapter() });

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthProvider should render correclty 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "initialize": true,
+      "logout": [MockFunction],
+    }
+  }
+>
+  <FakeComponent />
+</ContextProvider>
+`;

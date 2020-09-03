@@ -12,12 +12,15 @@ import Item from './components/item';
 // slides config
 import slidesConfig from './slides-config';
 
+// Models
+import { IAppIntroProps } from './models/app-intro-interface';
+
 // Styles
 import useStyles from './styles';
 
 const messages = I18n.t('appIntro');
 
-const AppIntro = (): ReactElement => {
+export const AppIntro = ({ onSkip }: IAppIntroProps): ReactElement => {
   const styles = useStyles();
   const slider = React.useRef(null);
   const [index, setIndex] = React.useState(1);
@@ -36,12 +39,11 @@ const AppIntro = (): ReactElement => {
       activeDotStyle={styles.activeDotStyle}
       bottomButton
       showSkipButton
+      onSkip={onSkip}
       skipLabel={messages.skipLabel}
       renderNextButton={(): ReactElement => <Button title={messages.nextLabel} onPress={nextSlide} />}
       onSlideChange={onSlideChange}
-      renderDoneButton={(): ReactElement => <Button title={messages.doneLabel} />}
+      renderDoneButton={(): ReactElement => <Button title={messages.doneLabel} onPress={onSkip} />}
     />
   );
 };
-
-export default AppIntro;

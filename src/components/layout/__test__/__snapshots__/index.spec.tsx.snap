@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LayoutView component should save a snapshot of the component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": undefined,
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <FakeComponent />
+</View>
+`;

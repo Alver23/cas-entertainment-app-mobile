@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppStack should render correctly 1`] = `
+<ForwardRef(NavigationContainer)>
+  <StackNavigator>
+    <Screen
+      component={[Function]}
+      name="Home"
+    />
+  </StackNavigator>
+</ForwardRef(NavigationContainer)>
+`;

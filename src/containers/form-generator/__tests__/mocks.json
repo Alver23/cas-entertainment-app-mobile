@@ -1,0 +1,8 @@
+[
+  {
+    "key": "email",
+    "placeholder": "email",
+    "controlType": "input",
+    "value": "email"
+  }
+]
