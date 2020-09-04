@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.2.0...v1.3.0) (2020-09-04)
+
+
+### Features
+
+* add module for authentication in the system ([#6](https://github.com/Alver23/cas-entertainment-app-mobile/issues/6)) ([c6b51b0](https://github.com/Alver23/cas-entertainment-app-mobile/commit/c6b51b0c0e82fda154be325322a17ea3c073e437))
+
 ## [1.2.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.1.0...v1.2.0) (2020-08-23)
 
 
