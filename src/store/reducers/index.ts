@@ -2,10 +2,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
 // Reducers
-import { globalReducers } from './globals';
+import { globalReducers, globalFeatureKey } from './globals';
 
 export const rootReducer = combineReducers({
-  global: globalReducers,
+  [globalFeatureKey]: globalReducers,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

@@ -22,7 +22,7 @@ describe('InputForm', () => {
     component = shallow(<MemoizeComponent {...props} />);
   });
 
-  it('should render correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 });

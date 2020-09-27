@@ -1,4 +1,5 @@
 // Dependencies
+import * as ReactRedux from 'react-redux';
 import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 
@@ -20,8 +21,10 @@ jest.mock('@navigation/app-stack', () => ({ AppStack: jest.fn() }));
 
 describe('AppContainer', () => {
   let component: ShallowWrapper;
+  const callback = jest.fn();
 
   beforeEach(() => {
+    jest.spyOn(ReactRedux, 'useSelector').mockReturnValue(callback);
     component = shallow(<AppContainer />);
   });
 

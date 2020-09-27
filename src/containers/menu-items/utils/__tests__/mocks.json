@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "description": "The menu for students",
+      "name": "students",
+      "orden": 1
+    }
+  ],
+  "translations": {
+    "students": "Students"
+  }
+}

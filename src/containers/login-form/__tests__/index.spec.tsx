@@ -1,9 +1,8 @@
 // Dependencies
+import * as ReactRedux from 'react-redux';
 import React, { Dispatch } from 'react';
 import { Text } from 'react-native-elements';
 import { shallow, ShallowWrapper } from 'enzyme';
-
-// Containers
 
 // Hooks
 import * as hooks from '@hooks/state-action';
@@ -11,6 +10,8 @@ import * as hooks from '@hooks/state-action';
 // Services
 import { userService } from '@services/user/user-service';
 import { authenticationService } from '@services/authentication/authentication-service';
+
+// Containers
 import { FormGenerator } from '../../form-generator';
 import { LoginForm } from '../index';
 
@@ -18,8 +19,10 @@ jest.mock('@services/authentication/authentication-service');
 
 describe('LoginForm', () => {
   let component: ShallowWrapper;
+  const callback = jest.fn();
 
   beforeEach(() => {
+    jest.spyOn(ReactRedux, 'useDispatch').mockReturnValue(callback);
     component = shallow(<LoginForm />);
   });
 
@@ -27,7 +30,7 @@ describe('LoginForm', () => {
     jest.clearAllMocks();
   });
 
-  it('should rendering correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 

@@ -16,7 +16,7 @@ describe('App Component', () => {
     component = shallow(<App />);
   });
 
-  it('renders correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 });
