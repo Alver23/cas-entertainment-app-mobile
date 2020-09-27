@@ -38,7 +38,7 @@ describe('FormGenerator', () => {
     component = shallow(<FormGenerator {...props} />);
   });
 
-  it('should render correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 

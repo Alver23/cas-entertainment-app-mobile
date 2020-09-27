@@ -12,6 +12,7 @@ import { authenticationService } from '@services/authentication/authentication-s
 import I18n from '@core/i18n';
 
 // Hooks
+import { useShowAppLoader } from '@hooks/app-loader';
 import { useStateAction } from '@hooks/state-action';
 
 // Containers
@@ -24,15 +25,18 @@ import { formSchema } from './form-schema';
 import { useStyles } from './styles';
 
 export const LoginForm = (): ReactElement => {
+  const [showAppLoader] = useShowAppLoader();
   const [error, showError, hideError] = useStateAction();
   const styles = useStyles();
 
   const onSubmit = React.useCallback((values) => {
+    showAppLoader(true);
     authenticationService
       .login(values)
       .then(async (response) => {
         await userService.setUserInfo(response);
         hideError();
+        showAppLoader(false);
         RNRestart.Restart();
       })
       .catch(() => showError());

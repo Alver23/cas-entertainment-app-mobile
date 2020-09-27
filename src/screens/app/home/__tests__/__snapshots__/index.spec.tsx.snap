@@ -1,13 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppStack should render correctly 1`] = `
-<View>
-  <Themed.Text>
-    HomeScreen
-  </Themed.Text>
-  <ForwardRef(Themed.Button)
-    onPress={[MockFunction]}
-    title="Logout"
-  />
-</View>
+exports[`HomeScreen should save a snapshot of the component 1`] = `
+<ScrollView
+  style={
+    Object {
+      "backgroundColor": undefined,
+      "flex": 1,
+    }
+  }
+>
+  <LayoutView
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Memo(Component) />
+    <Themed.Text
+      h4={true}
+      style={
+        Object {
+          "marginVertical": 8,
+        }
+      }
+    >
+      Bienvenido
+    </Themed.Text>
+    <MenuItems />
+    <ForwardRef(Themed.Button)
+      onPress={[MockFunction]}
+      title="Logout"
+    />
+  </LayoutView>
+</ScrollView>
 `;

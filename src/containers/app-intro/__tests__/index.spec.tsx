@@ -26,7 +26,7 @@ describe('AppIntro container', () => {
     component = shallow(<AppIntro {...props} />);
   });
 
-  it('should rendering correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 

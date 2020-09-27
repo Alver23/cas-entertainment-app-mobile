@@ -8,7 +8,7 @@ import * as hooks from '@hooks/authentication';
 // Screen
 import { HomeScreen } from '../index';
 
-describe('AppStack', () => {
+describe('HomeScreen', () => {
   let component: ShallowRendererProps;
 
   const mockState = {
@@ -20,7 +20,7 @@ describe('AppStack', () => {
     component = shallow(<HomeScreen />);
   });
 
-  it('should render correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 });

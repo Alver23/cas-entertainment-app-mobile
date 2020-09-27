@@ -16,7 +16,7 @@ describe('Item component', () => {
     component = shallow(<Item {...mocks} />);
   });
 
-  it('should rendering correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 

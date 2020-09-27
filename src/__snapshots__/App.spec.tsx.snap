@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Component renders correctly 1`] = `
+exports[`App Component should save a snapshot of the component 1`] = `
 <Provider
   store={
     Object {

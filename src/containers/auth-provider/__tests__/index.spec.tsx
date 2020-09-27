@@ -28,7 +28,7 @@ describe('AuthProvider', () => {
     expect(component.find(LoaderView).exists()).toBeTruthy();
   });
 
-  it('should render correclty', () => {
+  it('should save a snapshot of the component', () => {
     const mockState: [Record<string, boolean>, () => void] = [{ initialize: true }, jest.fn()];
     jest.spyOn(hooks, 'useAuth').mockReturnValue(mockState);
     component.setProps({});

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`AppIntro container should rendering correctly 1`] = `
+exports[`AppIntro container should save a snapshot of the component 1`] = `
 <AppIntroSlider
   activeDotStyle={
     Object {

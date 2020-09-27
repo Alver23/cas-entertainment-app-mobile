@@ -12,7 +12,7 @@ describe('AuthStack', () => {
     component = shallow(<AuthStack />);
   });
 
-  it('should render correctly', () => {
+  it('should save a snapshot of the component', () => {
     expect(component).toMatchSnapshot();
   });
 });
