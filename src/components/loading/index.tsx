@@ -1,6 +1,6 @@
 // Dependencies
 import React, { ReactElement } from 'react';
-import { ActivityIndicator, View } from 'react-native';
+import { ActivityIndicator } from 'react-native';
 
 // Models
 import { ILoadingProps } from './models';

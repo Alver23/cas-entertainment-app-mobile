@@ -1,6 +1,5 @@
 // Test file
-import {initialState, USER_CONSTANTS, userReducer} from "../index";
-
+import { initialState, USER_CONSTANTS, userReducer } from '../index';
 
 describe('UserProvider reducer', () => {
   const cases = [
@@ -14,14 +13,14 @@ describe('UserProvider reducer', () => {
     [
       {
         type: USER_CONSTANTS.SET_USER,
-        payload: { id: 1, name: 'fake name'},
+        payload: { id: 1, name: 'fake name' },
         property: 'user',
       },
     ],
     [
       {
         type: USER_CONSTANTS.SET_MENUS,
-        payload: [{id: 2}],
+        payload: [{ id: 2 }],
         property: 'menus',
       },
     ],

@@ -5,7 +5,7 @@ import { shallow, ShallowRendererProps } from 'enzyme';
 // Screen
 import { ArtistScreen } from '../index';
 
-describe('ArtistScreen', () => {
+describe('<ArtistScreen />', () => {
   let component: ShallowRendererProps;
 
   beforeEach(() => {

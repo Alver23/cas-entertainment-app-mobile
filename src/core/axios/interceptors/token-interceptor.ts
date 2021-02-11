@@ -2,7 +2,7 @@
 import { AxiosRequestConfig } from 'axios';
 
 // Commons
-import { getToken } from "@commons/auth";
+import { getToken } from '@commons/auth';
 
 export const headerAsBearerTokenInterceptor = () => async (requestConfig: AxiosRequestConfig) => {
   const token = await getToken();
@@ -11,5 +11,5 @@ export const headerAsBearerTokenInterceptor = () => async (requestConfig: AxiosR
     Authorization: `Bearer ${token}`,
   };
 
-  return { ...requestConfig, headers};
+  return { ...requestConfig, headers };
 };

@@ -2,11 +2,9 @@
 import RNSensitiveInfo from 'react-native-sensitive-info';
 
 // Test file
-import { setAuthData, clearAuthData, getRefreshToken, getToken } from "../index";
-
+import { setAuthData, clearAuthData, getRefreshToken, getToken } from '../index';
 
 describe('Auth commons', () => {
-
   describe('getToken method', () => {
     it('should get token from local storage', () => {
       const mockData = { token: 123 };
@@ -59,5 +57,4 @@ describe('Auth commons', () => {
       });
     });
   });
-
 });

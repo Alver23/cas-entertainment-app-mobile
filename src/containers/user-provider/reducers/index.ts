@@ -1,5 +1,5 @@
 // Models
-import { IUser, IUserMenu } from "@models/user-interface";
+import { IUser, IUserMenu } from '@models/user-interface';
 
 export enum USER_CONSTANTS {
   SET_USER = 'SET_USER',
@@ -18,7 +18,7 @@ export type IState = {
 export type IAction = {
   type: USER_CONSTANTS;
   payload: any;
-}
+};
 
 export const initialState = {
   user: undefined,
@@ -38,4 +38,4 @@ export const userReducer = (state: IState, action: IAction) => {
     default:
       return state;
   }
-}
+};

@@ -8,7 +8,7 @@ import { FormGenerator } from '../../form-generator';
 import { LoginForm } from '../index';
 
 // Hooks
-import * as authenticationHooks from "../hooks";
+import * as authenticationHooks from '../hooks';
 
 jest.mock('@services/authentication/authentication-service');
 
@@ -17,14 +17,11 @@ describe('LoginForm', () => {
   const authenticationMock: [any, jest.Mock] = [{}, jest.fn()];
 
   beforeEach(() => {
-    jest
-      .spyOn(authenticationHooks, 'useAuthentication')
-      .mockReturnValue(authenticationMock);
+    jest.spyOn(authenticationHooks, 'useAuthentication').mockReturnValue(authenticationMock);
     component = shallow(<LoginForm />);
   });
 
   afterEach(() => {
-
     jest.clearAllMocks();
   });
 

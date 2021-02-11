@@ -29,8 +29,8 @@ export const HomeScreen = (): ReactElement => {
         <Text h4 style={styles.text}>
           {I18n.t('homeScreen.welcome')}
         </Text>
-        <MenuItems/>
-        <Button title="Logout" onPress={logout}/>
+        <MenuItems />
+        <Button title="Logout" onPress={logout} />
       </LayoutView>
     </ScrollView>
   );

@@ -1,4 +1,3 @@
-
 export enum CONSTANTS {
   SET_LOADING = 'SET_LOADING',
   SET_DATA = 'SET_DATA',
@@ -9,12 +8,12 @@ export type IState = {
   loading: boolean;
   data: any;
   errors: Error;
-}
+};
 
 type IAction = {
   type: CONSTANTS;
   payload: any;
-}
+};
 
 export const initialState: IState = {
   data: undefined,
@@ -33,4 +32,4 @@ export const fetchReducer = (state: IState, action: IAction): IState => {
     default:
       return state;
   }
-}
+};

@@ -1,4 +1,3 @@
-
 export interface IAuthContext {
   authenticated: boolean;
   token: string;

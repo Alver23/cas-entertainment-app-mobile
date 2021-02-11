@@ -9,11 +9,11 @@ import { useLocalSession } from '@hooks/auth';
 import { userService } from '@services/user';
 
 // Reducers
-import { USER_CONSTANTS, initialState, userReducer, IState } from "../reducers";
+import { USER_CONSTANTS, initialState, userReducer, IState } from '../reducers';
 
 export const useUserProvider = (): [IState] => {
   const { token } = useLocalSession();
-  const [ state, dispatch ] = React.useReducer(userReducer, initialState);
+  const [state, dispatch] = React.useReducer(userReducer, initialState);
   const { user } = state;
 
   React.useEffect(() => {
@@ -30,7 +30,7 @@ export const useUserProvider = (): [IState] => {
         .then((payload) => {
           dispatch({ type: USER_CONSTANTS.SET_MENUS, payload });
         })
-        .catch((error) =>  {
+        .catch((error) => {
           dispatch({ type: USER_CONSTANTS.SET_ERROR, payload: error });
         })
         .finally(() => {
@@ -40,4 +40,4 @@ export const useUserProvider = (): [IState] => {
   }, [user?.id]);
 
   return [state];
-}
+};

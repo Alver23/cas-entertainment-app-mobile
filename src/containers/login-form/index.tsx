@@ -7,7 +7,7 @@ import { Text } from 'react-native-elements';
 import I18n from '@core/i18n';
 
 // Hooks
-import { useAuthentication } from "./hooks";
+import { useAuthentication } from './hooks';
 
 // Containers
 import { FormGenerator } from '../form-generator';

@@ -6,7 +6,7 @@ import axios, { AxiosError, AxiosResponse } from 'axios';
 import endpoints from '@config/endpoints';
 
 // Commons
-import { setAuthData, getRefreshToken, clearAuthData } from "@commons/auth";
+import { setAuthData, getRefreshToken, clearAuthData } from '@commons/auth';
 
 export const refresTokenInterceptor = (): any => async (error: AxiosError) => {
   const originalRequest: any = error.config;

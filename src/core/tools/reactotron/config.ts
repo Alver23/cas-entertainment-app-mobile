@@ -1,12 +1,11 @@
 // Dependencies
 import AsyncStorage from '@react-native-community/async-storage';
-import { reactotronRedux } from 'reactotron-redux'
+import { reactotronRedux } from 'reactotron-redux';
 import Reactotron, { trackGlobalErrors, openInEditor, networking } from 'reactotron-react-native';
 
-import { name } from "../../../../package.json";
+import { name } from '../../../../package.json';
 
-const reactotron = Reactotron
-  .setAsyncStorageHandler(AsyncStorage)
+const reactotron = Reactotron.setAsyncStorageHandler(AsyncStorage)
   .configure({
     name,
   })

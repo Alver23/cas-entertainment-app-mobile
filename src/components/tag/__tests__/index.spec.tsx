@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { Text } from 'react-native-elements';
 
-import Tag from './../index';
+import Tag from '../index';
 
 describe('<Tag />', () => {
   let component: ShallowWrapper;

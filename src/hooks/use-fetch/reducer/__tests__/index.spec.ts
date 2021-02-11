@@ -1,6 +1,5 @@
 // Test file
-import {initialState, CONSTANTS, fetchReducer} from "../index";
-
+import { initialState, CONSTANTS, fetchReducer } from '../index';
 
 describe('Fetch reducer', () => {
   const cases = [

@@ -1,6 +1,6 @@
 // Dependencies
 import React from 'react';
-import RNRestart from "react-native-restart";
+import RNRestart from 'react-native-restart';
 
 // Hooks
 import { useShowAppLoader } from '@hooks/app-loader';
@@ -10,7 +10,7 @@ import { useStateAction } from '@hooks/state-action';
 import { authenticationService } from '@services/authentication/authentication-service';
 
 // Commons
-import { setAuthData } from "@commons/auth";
+import { setAuthData } from '@commons/auth';
 
 export const useAuthentication = (): [boolean, (values) => void] => {
   const [showAppLoader] = useShowAppLoader();
@@ -26,10 +26,10 @@ export const useAuthentication = (): [boolean, (values) => void] => {
         RNRestart.Restart();
       })
       .catch(() => {
-        showError()
+        showError();
       })
-      .finally(() => showAppLoader(false))
+      .finally(() => showAppLoader(false));
   }, []);
 
-  return [error, onSubmit]
-}
+  return [error, onSubmit];
+};

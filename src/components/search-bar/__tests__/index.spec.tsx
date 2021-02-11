@@ -3,7 +3,7 @@ import React, { Dispatch } from 'react';
 import { shallow, ShallowWrapper } from 'enzyme';
 import { SearchBar, Button } from 'react-native-elements';
 
-import Search from './../index';
+import Search from '../index';
 
 describe('<Search />', () => {
   let component: ShallowWrapper;

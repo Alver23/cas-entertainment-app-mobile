@@ -2,21 +2,24 @@
 import React from 'react';
 
 // Reducers
-import { fetchReducer, initialState, CONSTANTS, IState } from "./reducer";
+import { fetchReducer, initialState, CONSTANTS, IState } from './reducer';
 
 export const useFetch = (callback: Promise<any>, dependencies: Array<any>, initialValues: any = {}): [IState, () => void] => {
   const values = {
     ...initialState,
     ...initialValues,
-  }
+  };
 
-  const [ state, dispatch ] = React.useReducer(fetchReducer, values);
+  const [state, dispatch] = React.useReducer(fetchReducer, values);
 
   const isMounted = React.useRef(true);
 
-  React.useEffect(() => () => {
-    isMounted.current = false;
-  }, []);
+  React.useEffect(
+    () => () => {
+      isMounted.current = false;
+    },
+    [],
+  );
 
   const memoizeCallback = React.useCallback(async () => {
     return (await callback)();

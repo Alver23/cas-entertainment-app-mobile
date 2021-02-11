@@ -4,14 +4,14 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 // Containers
-import { UserProvider } from "@containers/user-provider";
+import { UserProvider } from '@containers/user-provider';
 
 // Screens
 import { HomeScreen } from '@screens/app';
 import { ArtistScreen } from '@screens/app/artists';
 
 // Core
-import { customColors } from "@core/theme";
+import { customColors } from '@core/theme';
 
 const Stack = createStackNavigator();
 

@@ -3,7 +3,7 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-import ListItem from './../index';
+import ListItem from '../index';
 
 describe('<ListItem />', () => {
   let component: ShallowWrapper;

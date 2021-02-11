@@ -8,7 +8,7 @@ import { useDidMount } from '@hooks/did-mount';
 import { IMutableRefObject } from '@models/mutable-ref-interface';
 
 // Commons
-import { clearAuthData, getToken } from "@commons/auth";
+import { clearAuthData, getToken } from '@commons/auth';
 
 // Contexts
 import { IAuthContext } from '@contexts/auth';
