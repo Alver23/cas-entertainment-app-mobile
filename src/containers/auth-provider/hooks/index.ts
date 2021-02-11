@@ -7,15 +7,15 @@ import { useDidMount } from '@hooks/did-mount';
 // Models
 import { IMutableRefObject } from '@models/mutable-ref-interface';
 
-// Services
-import { userService } from '@services/user/user-service';
+// Commons
+import { clearAuthData, getToken } from "@commons/auth";
 
 // Contexts
 import { IAuthContext } from '@contexts/auth';
 
 export const useAuth = (): [T, () => void] => {
   const initialState: IAuthContext = {
-    user: null,
+    token: null,
     authenticated: false,
     initialize: false,
   };
@@ -25,7 +25,7 @@ export const useAuth = (): [T, () => void] => {
 
   const logout: () => void = React.useCallback(async () => {
     setData({ ...initialState, initialize: true });
-    await userService.clearUserInfo();
+    await clearAuthData();
   }, []);
 
   useDidMount(
@@ -37,14 +37,13 @@ export const useAuth = (): [T, () => void] => {
   );
 
   useDidMount((): void => {
-    userService
-      .getUserInfo()
-      .then((user) => {
+    getToken()
+      .then((token: string) => {
         if (isMounted.current) {
           setData({
-            user,
+            token,
             initialize: true,
-            authenticated: !!user,
+            authenticated: !!token,
           });
         }
       })

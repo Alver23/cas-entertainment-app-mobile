@@ -4,7 +4,7 @@ import axios, { AxiosInstance } from 'axios';
 // Config
 import { defaultTimeout } from '@config/index';
 
-// Interceptos
+// Interceptors
 import { responseInterceptor } from './interceptors/response-interceptor';
 import { refresTokenInterceptor } from './interceptors/refresh-token-interceptor';
 import { headerAsBearerTokenInterceptor } from './interceptors/token-interceptor';

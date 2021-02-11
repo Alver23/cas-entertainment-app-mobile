@@ -5,6 +5,6 @@ import React from 'react';
 import { AuthContext } from '@contexts/auth/auth-context';
 import { IAuthContext } from '@contexts/auth/auth-context-interface';
 
-export const useAuthentication = () => {
+export const useLocalSession = () => {
   return React.useContext<IAuthContext>(AuthContext);
 };

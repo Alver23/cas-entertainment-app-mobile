@@ -1,16 +1,11 @@
 {
-  "user": {
-    "data": {
-      "user": {
-        "menus": [
-          {
-            "id": 1,
-            "name": "fake",
-            "route": "fake route",
-            "image": ""
-          }
-        ]
-      }
+  "menus": [
+    {
+      "id": 1,
+      "name": "fake",
+      "route": "fake route",
+      "image": ""
     }
-  }
+  ]
+
 }

@@ -5,7 +5,6 @@ exports[`HomeScreen should save a snapshot of the component 1`] = `
   style={
     Object {
       "backgroundColor": undefined,
-      "flex": 1,
     }
   }
 >
@@ -13,6 +12,7 @@ exports[`HomeScreen should save a snapshot of the component 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "justifyContent": "center",
       }
     }
   >

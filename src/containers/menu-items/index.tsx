@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 import { MemoizedCard } from '@components/card';
 
 // Hooks
-import { useAuthentication } from '@hooks/authentication';
+import { useUserLocalSession } from '@hooks/user';
 
 // Core
 import I18n from '@core/i18n';
@@ -20,9 +20,9 @@ import { styles } from './styles';
 
 export const MenuItems = (): ReactElement => {
   const { navigate } = useNavigation();
-  const { user } = useAuthentication();
+  const { menus } = useUserLocalSession();
   const translations = I18n.t('menuItems');
-  const items = getMenuItems(user.data.user.menus, translations);
+  const items = getMenuItems(menus, translations);
   return (
     <View style={styles.container}>
       {items.map(({ id, image, name, route }) => (

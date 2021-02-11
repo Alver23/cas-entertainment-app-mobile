@@ -7,7 +7,7 @@ import { LoaderView } from '@components/loader';
 
 // Hooks
 import { useStateAction } from '@hooks/state-action';
-import { useAuthentication } from '@hooks/authentication';
+import { useLocalSession } from '@hooks/auth';
 
 // Navigation
 import { AppStack } from '@navigation/app-stack';
@@ -21,7 +21,7 @@ import { AppIntro } from '../app-intro';
 
 export const AppContainer = (): ReactElement => {
   const loader = useSelector(selectAppLoader);
-  const { authenticated } = useAuthentication();
+  const { authenticated } = useLocalSession();
   const [mustShowIntro, , skipIntro] = useStateAction(!authenticated);
 
   return (

@@ -3,10 +3,10 @@ import RNRestart from 'react-native-restart';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 
 // Config
-import { endpoints } from '@config/index';
+import endpoints from '@config/endpoints';
 
-// Services
-import { userService } from '@services/user/user-service';
+// Commons
+import { setAuthData, getRefreshToken, clearAuthData } from "@commons/auth";
 
 export const refresTokenInterceptor = (): any => async (error: AxiosError) => {
   const originalRequest: any = error.config;
@@ -14,18 +14,20 @@ export const refresTokenInterceptor = (): any => async (error: AxiosError) => {
   const { status = 503 } = response;
   if (status === 401) {
     if (originalRequest.retry) {
+      await clearAuthData();
       return RNRestart.Restart();
     }
     try {
       const uri = endpoints.refreshToken;
-      const refreshToken = await userService.getRefreshToken();
       originalRequest.retry = true;
+      const refreshToken = await getRefreshToken();
       const { data: responseUser } = await axios.post(uri, { refreshToken });
-      const user = responseUser.data;
-      await userService.setUserInfo(user);
-      originalRequest.headers.Authorization = `Bearer ${user.token}`;
+      const responseRefreshToken = responseUser.data;
+      await setAuthData(responseRefreshToken);
+      originalRequest.headers.Authorization = `Bearer ${responseRefreshToken.token}`;
       return axios(originalRequest).then((res: AxiosResponse) => res.data);
     } catch (e) {
+      await clearAuthData();
       return RNRestart.Restart();
     }
   }

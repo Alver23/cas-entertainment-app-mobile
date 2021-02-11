@@ -12,7 +12,6 @@
     "!src/**/screens/auth/index.ts",
     "!src/**/store/actions/index.ts",
     "!src/**/models/*.ts",
-    "!src/models/*.ts",
     "!src/store/index.ts"
   ],
   "coverageDirectory": "coverage",
@@ -27,7 +26,8 @@
   ],
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "coveragePathIgnorePatterns": [
-    "src/core"
+    "src/core",
+    "src/models/"
   ],
   "transformIgnorePatterns": [
     "node_modules/(?!(jest-)?react-native|@react-native-community|react-native-elements|@react-navigation)"

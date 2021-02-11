@@ -1,9 +1,7 @@
-// Models
-import { IUserAuth } from '@models/user-interface';
 
 export interface IAuthContext {
   authenticated: boolean;
-  user: IUserAuth;
+  token: string;
   initialize: boolean;
   logout: () => void;
 }

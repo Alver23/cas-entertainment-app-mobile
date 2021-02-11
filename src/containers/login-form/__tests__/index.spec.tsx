@@ -1,32 +1,30 @@
 // Dependencies
-import * as ReactRedux from 'react-redux';
-import React, { Dispatch } from 'react';
+import React from 'react';
 import { Text } from 'react-native-elements';
 import { shallow, ShallowWrapper } from 'enzyme';
-
-// Hooks
-import * as hooks from '@hooks/state-action';
-
-// Services
-import { userService } from '@services/user/user-service';
-import { authenticationService } from '@services/authentication/authentication-service';
 
 // Containers
 import { FormGenerator } from '../../form-generator';
 import { LoginForm } from '../index';
 
+// Hooks
+import * as authenticationHooks from "../hooks";
+
 jest.mock('@services/authentication/authentication-service');
 
 describe('LoginForm', () => {
   let component: ShallowWrapper;
-  const callback = jest.fn();
+  const authenticationMock: [any, jest.Mock] = [{}, jest.fn()];
 
   beforeEach(() => {
-    jest.spyOn(ReactRedux, 'useDispatch').mockReturnValue(callback);
+    jest
+      .spyOn(authenticationHooks, 'useAuthentication')
+      .mockReturnValue(authenticationMock);
     component = shallow(<LoginForm />);
   });
 
   afterEach(() => {
+
     jest.clearAllMocks();
   });
 
@@ -35,21 +33,8 @@ describe('LoginForm', () => {
   });
 
   it('should call the onSubmit method but should return error', async () => {
-    jest.spyOn(authenticationService, 'login').mockRejectedValue({ error: {} });
-
     await component.find(FormGenerator).props().onSubmit();
-
+    expect(authenticationMock[1]).toHaveBeenCalledTimes(1);
     expect(component.find(Text).exists()).toBeTruthy();
-  });
-
-  it('should call the onSubmit method when the form is valid', async () => {
-    const mockState: [boolean, Dispatch<() => void>, Dispatch<() => void>] = [false, jest.fn(), jest.fn()];
-    jest.spyOn(hooks, 'useStateAction').mockReturnValue(mockState);
-    jest.spyOn(authenticationService, 'login').mockResolvedValue({ data: {} });
-    const userServiceSpy = jest.spyOn(userService, 'setUserInfo').mockResolvedValue({});
-    component = shallow(<LoginForm />);
-    await component.find(FormGenerator).props().onSubmit();
-
-    expect(userServiceSpy).toHaveBeenCalled();
   });
 });

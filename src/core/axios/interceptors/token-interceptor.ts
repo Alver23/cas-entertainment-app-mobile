@@ -1,17 +1,15 @@
 // Dependencies
 import { AxiosRequestConfig } from 'axios';
 
-// Services
-import { userService } from '@services/user/user-service';
+// Commons
+import { getToken } from "@commons/auth";
 
 export const headerAsBearerTokenInterceptor = () => async (requestConfig: AxiosRequestConfig) => {
-  const token = await userService.getToken();
+  const token = await getToken();
   const headers = {
     ...requestConfig.headers,
     Authorization: `Bearer ${token}`,
   };
-  return {
-    ...requestConfig,
-    ...headers,
-  };
+
+  return { ...requestConfig, headers};
 };

@@ -6,11 +6,11 @@ import { ITheme } from '@core/theme';
 
 export const useStyles = makeStyles((theme: ITheme) => ({
   container: {
-    backgroundColor: theme.colors.blue2,
-    flex: 1,
+    backgroundColor: theme.colors.blue1,
   },
   layoutContainer: {
     alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
     marginVertical: 8,
