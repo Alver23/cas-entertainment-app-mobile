@@ -2,7 +2,7 @@
 import {initialState, USER_CONSTANTS, userReducer} from "../index";
 
 
-describe('Cropbox reducer', () => {
+describe('UserProvider reducer', () => {
   const cases = [
     [
       {
