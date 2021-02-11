@@ -25,7 +25,7 @@ exports[`LoginForm should save a snapshot of the component 1`] = `
         },
       ]
     }
-    onSubmit={[Function]}
+    onSubmit={[MockFunction]}
     submitLabelButton="Log in"
     validations={
       ObjectSchema {
@@ -122,6 +122,25 @@ exports[`LoginForm should save a snapshot of the component 1`] = `
         "type": "object",
       }
     }
-  />
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginVertical": 14,
+        }
+      }
+    >
+      <Themed.Text
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+      >
+        Email or password invalid
+      </Themed.Text>
+    </View>
+  </FormGenerator>
 </Fragment>
 `;

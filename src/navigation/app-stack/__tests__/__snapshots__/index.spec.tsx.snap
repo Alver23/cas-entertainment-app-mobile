@@ -1,41 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AppStack should save a snapshot of the component 1`] = `
-<ForwardRef(NavigationContainer)>
-  <StackNavigator>
-    <Screen
-      component={[Function]}
-      name="Home"
-      options={
-        Object {
-          "headerShown": false,
-        }
+<UserProvider>
+  <ForwardRef(NavigationContainer)
+    theme={
+      Object {
+        "colors": Object {
+          "background": "rgb(242, 242, 242)",
+          "border": "rgb(216, 216, 216)",
+          "card": "#0B132A",
+          "notification": "rgb(255, 59, 48)",
+          "primary": "#ffffff",
+          "text": "#ffffff",
+        },
+        "dark": false,
       }
-    />
-    <Screen
-      component={[Function]}
-      name="artists"
-    />
-    <Screen
-      component={[Function]}
-      name="students"
-    />
-    <Screen
-      component={[Function]}
-      name="groups"
-    />
-    <Screen
-      component={[Function]}
-      name="itineraries"
-    />
-    <Screen
-      component={[Function]}
-      name="teachers"
-    />
-    <Screen
-      component={[Function]}
-      name="users"
-    />
-  </StackNavigator>
-</ForwardRef(NavigationContainer)>
+    }
+  >
+    <StackNavigator>
+      <Screen
+        component={[Function]}
+        name="Home"
+        options={
+          Object {
+            "headerShown": false,
+          }
+        }
+      />
+      <Screen
+        component={[Function]}
+        name="artists"
+        options={
+          Object {
+            "headerTitle": "",
+          }
+        }
+      />
+      <Screen
+        component={[Function]}
+        name="students"
+      />
+      <Screen
+        component={[Function]}
+        name="groups"
+      />
+      <Screen
+        component={[Function]}
+        name="itineraries"
+      />
+      <Screen
+        component={[Function]}
+        name="teachers"
+      />
+      <Screen
+        component={[Function]}
+        name="users"
+      />
+    </StackNavigator>
+  </ForwardRef(NavigationContainer)>
+</UserProvider>
 `;

@@ -3,7 +3,7 @@ import React from 'react';
 import { shallow, ShallowRendererProps } from 'enzyme';
 
 // Hooks
-import * as hooks from '@hooks/authentication';
+import * as hooks from '@hooks/auth';
 
 // Screen
 import { HomeScreen } from '../index';
@@ -16,7 +16,7 @@ describe('HomeScreen', () => {
   };
 
   beforeEach(() => {
-    jest.spyOn(hooks, 'useAuthentication').mockReturnValue(mockState);
+    jest.spyOn(hooks, 'useLocalSession').mockReturnValue(mockState);
     component = shallow(<HomeScreen />);
   });
 

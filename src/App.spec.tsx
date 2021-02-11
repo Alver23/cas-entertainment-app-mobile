@@ -6,6 +6,8 @@ import { shallow, ShallowRendererProps } from 'enzyme';
 import App from './App';
 
 // Mocks
+jest.mock('./store', () => jest.fn());
+jest.mock('./core/tools/reactotron', () => jest.fn());
 jest.mock('./containers/app', () => ({ AppContainer: jest.fn() }));
 jest.mock('./containers/auth-provider', () => ({ AuthProvider: jest.fn() }));
 

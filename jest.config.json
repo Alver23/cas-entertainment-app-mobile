@@ -10,7 +10,9 @@
     "!src/**/polyfills/*.{js,jsx,ts,tsx}",
     "!src/**/screens/app/index.ts",
     "!src/**/screens/auth/index.ts",
-    "!src/**/store/actions/index.ts"
+    "!src/**/store/actions/index.ts",
+    "!src/**/models/*.ts",
+    "!src/store/index.ts"
   ],
   "coverageDirectory": "coverage",
   "setupFiles": ["<rootDir>/jest/setup.js", "<rootDir>/node_modules/react-native-gesture-handler/jestSetup.js"],
@@ -24,7 +26,8 @@
   ],
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "coveragePathIgnorePatterns": [
-    "src/core"
+    "src/core",
+    "src/models/"
   ],
   "transformIgnorePatterns": [
     "node_modules/(?!(jest-)?react-native|@react-native-community|react-native-elements|@react-navigation)"

@@ -1,21 +1,20 @@
-export interface IRole {
-  id: number;
-  name: string;
-  description: string;
-}
-
 export interface IUser {
   id: number;
   firstName: string;
-  middleName: string;
   lastName: string;
-  dateOfBirth: string;
-  address: string;
   email: string;
-  roles: IRole[];
+  roles: string[];
 }
 
-export interface IUserAuth extends IUser {
-  refreshToken: string;
-  token: string;
+export interface IUserMenu {
+  id: number;
+  name: string;
+  description: string;
+  orden: number;
+}
+
+export interface IUserProvider {
+  user: IUser;
+  menus: IUserMenu[];
+  errors: Error;
 }

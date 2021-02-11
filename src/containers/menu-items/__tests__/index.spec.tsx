@@ -4,7 +4,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 import * as ReactNavigationHooks from '@react-navigation/native';
 
 // Hooks
-import * as AuthenticationHooks from '@hooks/authentication';
+import * as userHooks from '@hooks/user';
 
 // Components
 import { MemoizedCard } from '@components/card';
@@ -19,13 +19,13 @@ jest.mock('@react-navigation/native');
 describe('Menu Items container', () => {
   let component: ShallowWrapper;
 
-  const navigation = {
+  const navigation: any = {
     navigate: jest.fn(),
   };
 
   beforeEach(() => {
     jest.spyOn(ReactNavigationHooks, 'useNavigation').mockReturnValue(navigation);
-    jest.spyOn(AuthenticationHooks, 'useAuthentication').mockReturnValue(mocks);
+    jest.spyOn(userHooks, 'useUserLocalSession').mockReturnValue(mocks);
     component = shallow(<MenuItems />);
   });
 
@@ -38,7 +38,7 @@ describe('Menu Items container', () => {
   });
 
   it('should navigate to screen when on press menu item', () => {
-    const onPress = component.find(MemoizedCard).first().prop('onPress');
+    const onPress: jest.Mock = component.find(MemoizedCard).first().prop('onPress');
     onPress();
     expect(navigation.navigate).toHaveBeenCalled();
   });

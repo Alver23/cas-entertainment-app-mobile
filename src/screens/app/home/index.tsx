@@ -14,14 +14,14 @@ import { AppLogoView } from '@components/app-logo';
 import I18n from '@core/i18n';
 
 // Hooks
-import { useAuthentication } from '@hooks/authentication';
+import { useLocalSession } from '@hooks/auth';
 
 // Styles
 import { useStyles } from './styles';
 
 export const HomeScreen = (): ReactElement => {
   const styles = useStyles();
-  const { logout } = useAuthentication();
+  const { logout } = useLocalSession();
   return (
     <ScrollView style={styles.container}>
       <LayoutView style={styles.layoutContainer}>

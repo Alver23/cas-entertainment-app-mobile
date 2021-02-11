@@ -21,23 +21,22 @@ const fontFamily = {
 type RecursivePartial<T> = { [P in keyof T]?: RecursivePartial<T[P]> };
 export type ColorTypes = RecursivePartial<Colors> & { white: string; blue1: string; blue2: string; transparent: string };
 
-const customColors = {
+export const customColors = {
   white: '#ffffff',
   blue1: '#0B132A',
   blue2: '#186AA5',
   transparent: '#F5FCFF88',
   color1: '#495057',
   red: 'red',
+  primary: '#15E1CA',
+  gray2: '#707070',
 };
 
 export interface ITheme extends FullTheme {
   colors: RecursivePartial<ColorTypes>;
 }
 export const theme: Partial<ITheme> = {
-  colors: {
-    primary: '#15E1CA',
-    ...customColors,
-  },
+  colors: { ...customColors },
   Text: {
     style: {
       color: white,

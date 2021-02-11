@@ -12,6 +12,7 @@ import { rootStore } from './store';
 // @Core
 import { theme } from './core/theme';
 import './core/icon-config';
+import './core/tools/reactotron';
 
 // Container
 import { AppContainer } from './containers/app';

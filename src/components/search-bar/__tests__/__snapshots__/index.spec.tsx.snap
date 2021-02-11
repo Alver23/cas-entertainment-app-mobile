@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should render correctly 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "marginHorizontal": 16,
+    }
+  }
+>
+  <ForwardRef(Themed.SearchBar)
+    containerStyle={
+      Object {
+        "backgroundColor": "transparent",
+        "flex": 4,
+      }
+    }
+    inputContainerStyle={
+      Object {
+        "backgroundColor": undefined,
+      }
+    }
+    onChangeText={[Function]}
+    placeholder="placeholder"
+    searchIcon={
+      Object {
+        "iconStyle": Object {
+          "color": "#2089dc",
+        },
+        "size": 28,
+      }
+    }
+    showCancel={true}
+    value={null}
+  />
+  <ForwardRef(Themed.Button)
+    containerStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+    onPress={[Function]}
+    title="buttonTitle"
+  />
+</View>
+`;

@@ -5,7 +5,7 @@ import { shallow, ShallowWrapper } from 'enzyme';
 
 // Hooks
 import * as stateActionHook from '@hooks/state-action';
-import * as authenticationHook from '@hooks/authentication';
+import * as authHooks from '@hooks/auth';
 
 // Navigation
 import { AppStack } from '@navigation/app-stack';
@@ -47,13 +47,13 @@ describe('AppContainer', () => {
   });
 
   it('should show AppStack navigation when the user is authenticated', () => {
-    jest.spyOn(authenticationHook, 'useAuthentication').mockReturnValue({ authenticated: true });
+    jest.spyOn(authHooks, 'useLocalSession').mockReturnValue({ authenticated: true });
     component.setProps({});
     expect(component.find(AppStack).exists()).toBeTruthy();
   });
 
   it('should show AuthStack navigation when the user is not authenticated', () => {
-    jest.spyOn(authenticationHook, 'useAuthentication').mockReturnValue({ authenticated: false });
+    jest.spyOn(authHooks, 'useLocalSession').mockReturnValue({ authenticated: false });
     const mockState = [false, jest.fn(), jest.fn()];
     jest.spyOn(stateActionHook, 'useStateAction').mockReturnValue(mockState);
     component.setProps({});

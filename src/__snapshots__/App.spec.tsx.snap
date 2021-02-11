@@ -1,17 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App Component should save a snapshot of the component 1`] = `
-<Provider
-  store={
-    Object {
-      "dispatch": [Function],
-      "getState": [Function],
-      "replaceReducer": [Function],
-      "subscribe": [Function],
-      Symbol(observable): [Function],
-    }
-  }
->
+<Provider>
   <ThemeProvider
     theme={
       Object {
@@ -63,6 +53,7 @@ exports[`App Component should save a snapshot of the component 1`] = `
           "blue1": "#0B132A",
           "blue2": "#186AA5",
           "color1": "#495057",
+          "gray2": "#707070",
           "primary": "#15E1CA",
           "red": "red",
           "transparent": "#F5FCFF88",

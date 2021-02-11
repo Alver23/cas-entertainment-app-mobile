@@ -26,7 +26,7 @@ describe('Card component', () => {
   });
 
   it('should call the onPress void', () => {
-    const onPress = component.find(TouchableOpacity).prop('onPress');
+    const onPress = component.find(TouchableOpacity).prop('onPress') as any;
 
     onPress();
     expect(props.onPress).toHaveBeenCalled();
