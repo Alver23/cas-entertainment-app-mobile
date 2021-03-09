@@ -3,12 +3,15 @@
 exports[`<Tag /> should render correctly 1`] = `
 <View
   style={
-    Object {
-      "backgroundColor": "#2089dc",
-      "borderRadius": 8,
-      "paddingHorizontal": 8,
-      "paddingVertical": 4,
-    }
+    Array [
+      Object {
+        "backgroundColor": "#2089dc",
+        "borderRadius": 4,
+        "paddingHorizontal": 8,
+        "paddingVertical": 4,
+      },
+      undefined,
+    ]
   }
 >
   <Themed.Text>

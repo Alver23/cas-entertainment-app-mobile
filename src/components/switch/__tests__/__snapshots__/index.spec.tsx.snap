@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Switch /> should render correctly 1`] = `
+<SwitchSelector
+  animationDuration={350}
+  backgroundColor="#FFFFFF"
+  bold={false}
+  borderColor="#C9C9C9"
+  borderRadius={8}
+  borderWidth={1}
+  buttonColor="#2089dc"
+  buttonMargin={0}
+  disableValueChangeOnPress={false}
+  disabled={false}
+  fontSize={14}
+  hasPadding={false}
+  height={28}
+  imageStyle={Object {}}
+  initial={0}
+  onPress={[MockFunction]}
+  options={Array []}
+  returnObject={false}
+  selectedColor="#FFFFFF"
+  selectedTextContainerStyle={Object {}}
+  selectedTextStyle={Object {}}
+  style={
+    Object {
+      "borderColor": "#2089dc",
+      "borderRadius": 8,
+      "borderWidth": 1,
+      "width": 360,
+    }
+  }
+  textColor="#000000"
+  textContainerStyle={Object {}}
+  textStyle={Object {}}
+  valuePadding={1}
+/>
+`;

@@ -4,46 +4,16 @@ exports[`Card component should save a snapshot of the component 1`] = `
 <ForwardRef
   onPress={[MockFunction]}
   style={
-    Object {
-      "alignItems": "center",
-      "borderColor": "#186AA5",
-      "borderRadius": 12,
-      "borderWidth": 1,
-      "height": 160,
-      "justifyContent": "center",
-      "margin": 12,
-      "width": 160,
-    }
-  }
->
-  <ImageBackground
-    source="http://localhost/imgae.png"
-    style={
+    Array [
       Object {
-        "alignItems": "center",
-        "height": 160,
-        "justifyContent": "flex-end",
-        "width": 160,
-      }
-    }
-  >
-    <View
-      style={
-        Object {
-          "bottom": 32,
-        }
-      }
-    >
-      <Themed.Text
-        style={
-          Object {
-            "fontSize": 20,
-          }
-        }
-      >
-        fake text
-      </Themed.Text>
-    </View>
-  </ImageBackground>
-</ForwardRef>
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "flex": 1,
+        "margin": 4,
+        "padding": 8,
+      },
+      undefined,
+    ]
+  }
+/>
 `;

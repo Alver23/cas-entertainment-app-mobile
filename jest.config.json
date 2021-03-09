@@ -12,10 +12,11 @@
     "!src/**/screens/auth/index.ts",
     "!src/**/store/actions/index.ts",
     "!src/**/models/*.ts",
-    "!src/store/index.ts"
+    "!src/**/store/index.ts",
+    "!src/**/store/reducers/index.ts"
   ],
   "coverageDirectory": "coverage",
-  "setupFiles": ["<rootDir>/jest/setup.js", "<rootDir>/node_modules/react-native-gesture-handler/jestSetup.js"],
+  "setupFiles": ["<rootDir>/jest/setup.js"],
   "moduleFileExtensions": [
     "ts",
     "tsx",
@@ -27,7 +28,9 @@
   "snapshotSerializers": ["enzyme-to-json/serializer"],
   "coveragePathIgnorePatterns": [
     "src/core",
-    "src/models/"
+    "src/models/",
+    "src/containers/artists/",
+    "src/containers/infinite-scroll/"
   ],
   "transformIgnorePatterns": [
     "node_modules/(?!(jest-)?react-native|@react-native-community|react-native-elements|@react-navigation)"

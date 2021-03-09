@@ -1,0 +1,11 @@
+{
+  "groupList": [
+    {
+      "id": 1,
+      "name": "Turquia",
+      "membersNumber": 2,
+      "state": true
+    }
+  ],
+  "groupIds": [1, 2]
+}

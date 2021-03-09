@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardSmall /> should save a snapshot of the component 1`] = `
+<View
+  style={
+    Object {
+      "justifyContent": "space-between",
+      "width": 330,
+    }
+  }
+>
+  <Card
+    status="green"
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "width": "auto",
+          }
+        }
+      >
+        <Themed.Text
+          numberOfLines={1}
+          style={
+            Object {
+              "fontSize": 26.5,
+            }
+          }
+        >
+          fake title
+        </Themed.Text>
+        <Themed.Text
+          style={
+            Object {
+              "color": undefined,
+              "fontSize": 21.5,
+            }
+          }
+        >
+          (
+          fake description
+          )
+        </Themed.Text>
+      </View>
+    </View>
+  </Card>
+</View>
+`;

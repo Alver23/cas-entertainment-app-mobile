@@ -9,6 +9,7 @@ import { UserProvider } from '@containers/user-provider';
 // Screens
 import { HomeScreen } from '@screens/app';
 import { ArtistScreen } from '@screens/app/artists';
+import ArtistDetail from '@screens/app/artist-detail';
 
 // Core
 import { customColors } from '@core/theme';
@@ -38,6 +39,7 @@ export const AppStack = (): ReactElement => {
           <Stack.Screen name={'itineraries'} component={ArtistScreen} />
           <Stack.Screen name={'teachers'} component={ArtistScreen} />
           <Stack.Screen name={'users'} component={ArtistScreen} />
+          <Stack.Screen options={{ headerTitle: '' }} name={'artistDetail'} component={ArtistDetail} />
         </Stack.Navigator>
       </NavigationContainer>
     </UserProvider>

@@ -1,27 +1,22 @@
-// Dependencies
-import { StyleSheet } from 'react-native';
+// Hooks
+import { makeStyles } from '@hooks/theme';
 
-export const styles = StyleSheet.create({
+// Models
+import { ITheme } from '@core/theme';
+
+import { STATUS_TYPES } from './config';
+
+const styles = makeStyles(({ colors }: ITheme) => ({
   container: {
-    alignItems: 'center',
-    borderColor: '#186AA5',
-    borderRadius: 12,
+    flex: 1,
+    borderRadius: 8,
     borderWidth: 1,
-    height: 160,
-    justifyContent: 'center',
-    width: 160,
-    margin: 12,
+    margin: 4,
+    padding: 8,
   },
-  imageContainer: {
-    height: 160,
-    width: 160,
-    alignItems: 'center',
-    justifyContent: 'flex-end',
+  [STATUS_TYPES.GREEN]: {
+    borderColor: colors.primary,
   },
-  textContainer: {
-    bottom: 32,
-  },
-  text: {
-    fontSize: 20,
-  },
-});
+}));
+
+export default styles;

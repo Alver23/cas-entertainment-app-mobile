@@ -9,10 +9,10 @@ import { ITagProps } from './models';
 // Styles
 import useStyles from './styles';
 
-export const Tag = ({ children, text }: ITagProps): ReactElement => {
+export const Tag = ({ children, text, style }: ITagProps): ReactElement => {
   const styles = useStyles();
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       {text && <Text>{text}</Text>}
       {children}
     </View>
