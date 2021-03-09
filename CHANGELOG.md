@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.4.0...v1.5.0) (2021-03-09)
+
+
+### Features
+
+* add the component to display the artist information ([4e194f5](https://github.com/Alver23/cas-entertainment-app-mobile/commit/4e194f53d6518452bb0bde8ab68dfdd1797cd7f0))
+* added artist detail and infinite scroll ([d1dc019](https://github.com/Alver23/cas-entertainment-app-mobile/commit/d1dc0199330d86f026fb62a92dbde9f77c4450f9))
+* added list item component ([d381fe2](https://github.com/Alver23/cas-entertainment-app-mobile/commit/d381fe244462c420031428ebaf001527241cf96f))
+* added loading component ([0d0fbd0](https://github.com/Alver23/cas-entertainment-app-mobile/commit/0d0fbd0a505fe86d3090d146323717d7d0e19436))
+* added search bar component ([3143fcf](https://github.com/Alver23/cas-entertainment-app-mobile/commit/3143fcf4b6086f36f5605c13f530b8e0db0f4601))
+* added tag component ([5ae9b98](https://github.com/Alver23/cas-entertainment-app-mobile/commit/5ae9b98983b70641b771d55b53a9d544ddb0d3cb))
+* added use fetch hook ([4d76f7b](https://github.com/Alver23/cas-entertainment-app-mobile/commit/4d76f7b7d5c6d2179cc8826a4984195581afc789))
+* refactor login ([8493e65](https://github.com/Alver23/cas-entertainment-app-mobile/commit/8493e655148ff82dc6f0ba7ad96af4ae77c66502))
+
 ## [1.4.0](https://github.com/Alver23/cas-entertainment-app-mobile/compare/v1.3.0...v1.4.0) (2020-09-27)
 
 
