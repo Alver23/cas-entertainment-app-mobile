@@ -10,7 +10,7 @@ exports[`Menu Items container should save a snapshot of the component 1`] = `
     }
   }
 >
-  <Memo(Card)
+  <CardBackground
     key="1"
     onPress={[Function]}
   />

@@ -9,4 +9,12 @@ export default {
   user: {
     menus: `${apiUrl}users/:id/menus`,
   },
+  artist: {
+    get: `${apiUrl}artists`,
+    getById: `${apiUrl}artists/:id`,
+    updateById: `${apiUrl}artists/:id`,
+  },
+  group: {
+    get: `${apiUrl}groups`,
+  },
 };

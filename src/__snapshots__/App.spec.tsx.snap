@@ -50,6 +50,7 @@ exports[`App Component should save a snapshot of the component 1`] = `
           },
         },
         "colors": Object {
+          "black": "black",
           "blue1": "#0B132A",
           "blue2": "#186AA5",
           "color1": "#495057",

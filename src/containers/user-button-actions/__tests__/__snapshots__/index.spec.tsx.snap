@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserButtonActions /> should save a snapshot of the component 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "marginVertical": 16,
+      "width": "28%",
+    }
+  }
+>
+  <Component
+    buttonStyle={
+      Object {
+        "marginRight": 8,
+      }
+    }
+    iconConfig={
+      Object {
+        "name": "edit",
+        "type": "feather",
+      }
+    }
+    onPress={[MockFunction]}
+    title="Editar"
+  />
+  <Component
+    buttonStyle={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+    iconConfig={
+      Object {
+        "name": "close",
+        "type": "material",
+      }
+    }
+    onPress={[MockFunction]}
+    title="Eliminar"
+  />
+</View>
+`;

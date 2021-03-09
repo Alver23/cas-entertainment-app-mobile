@@ -30,6 +30,7 @@ export const customColors = {
   red: 'red',
   primary: '#15E1CA',
   gray2: '#707070',
+  black: 'black',
 };
 
 export interface ITheme extends FullTheme {

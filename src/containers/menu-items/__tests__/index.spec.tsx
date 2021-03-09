@@ -7,7 +7,7 @@ import * as ReactNavigationHooks from '@react-navigation/native';
 import * as userHooks from '@hooks/user';
 
 // Components
-import { MemoizedCard } from '@components/card';
+import CardBackground from '@components/card-background';
 
 import { MenuItems } from '../index';
 
@@ -38,7 +38,7 @@ describe('Menu Items container', () => {
   });
 
   it('should navigate to screen when on press menu item', () => {
-    const onPress: jest.Mock = component.find(MemoizedCard).first().prop('onPress');
+    const onPress: jest.Mock = component.find(CardBackground).first().prop('onPress');
     onPress();
     expect(navigation.navigate).toHaveBeenCalled();
   });

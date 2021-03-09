@@ -1,24 +1,20 @@
 // Dependencies
-import React, { memo, ReactElement } from 'react';
-import { View, ImageBackground, TouchableOpacity } from 'react-native';
-import { Text } from 'react-native-elements';
+import React, { ReactElement } from 'react';
+import { TouchableOpacity } from 'react-native';
 
 // Models
 import { ICard } from './models';
 
 // Styles
-import { styles } from './styles';
+import useStyles from './styles';
 
-const Card = ({ backgroundImage, onPress, text }: ICard): ReactElement => {
+const Card = ({ status, children, onPress }: ICard): ReactElement => {
+  const styles = useStyles();
   return (
-    <TouchableOpacity onPress={onPress} style={styles.container}>
-      <ImageBackground source={backgroundImage} style={styles.imageContainer}>
-        <View style={styles.textContainer}>
-          <Text style={styles.text}>{text}</Text>
-        </View>
-      </ImageBackground>
+    <TouchableOpacity onPress={onPress} style={[styles.container, styles[status]]}>
+      {children}
     </TouchableOpacity>
   );
 };
 
-export const MemoizedCard = memo(Card);
+export default Card;

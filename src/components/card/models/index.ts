@@ -1,8 +1,11 @@
 // Dependencies
-import { ViewProps } from 'react-native';
+import { ReactElement } from 'react';
+
+// Config
+import { STATUS_TYPES } from '../config';
 
 export interface ICard {
-  backgroundImage: ViewProps;
+  status: STATUS_TYPES;
+  children: ReactElement;
   onPress: () => void;
-  text: string;
 }

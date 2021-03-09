@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 // Components
-import { MemoizedCard } from '@components/card';
+import CardBackground from '@components/card-background';
 
 // Hooks
 import { useUserLocalSession } from '@hooks/user';
@@ -26,7 +26,7 @@ export const MenuItems = (): ReactElement => {
   return (
     <View style={styles.container}>
       {items.map(({ id, image, name, route }) => (
-        <MemoizedCard key={id.toString()} text={name} backgroundImage={image} onPress={() => navigate(route as any)} />
+        <CardBackground key={id.toString()} text={name} backgroundImage={image} onPress={() => navigate(route as any)} />
       ))}
     </View>
   );

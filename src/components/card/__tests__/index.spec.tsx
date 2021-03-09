@@ -3,22 +3,23 @@ import React from 'react';
 import { TouchableOpacity } from 'react-native';
 import { shallow, ShallowWrapper } from 'enzyme';
 
-// Components
-import { MemoizedCard } from '../index';
+// Config
+import { STATUS_TYPES } from '../config';
 
-const MemoizedComponent = MemoizedCard.type;
+// Components
+import Card from '../index';
 
 describe('Card component', () => {
   let component: ShallowWrapper;
 
   const props = {
-    backgroundImage: 'http://localhost/imgae.png',
+    status: STATUS_TYPES.BLUE,
     onPress: jest.fn(),
-    text: 'fake text',
+    children: <></>,
   };
 
   beforeEach(() => {
-    component = shallow(<MemoizedComponent {...props} />);
+    component = shallow(<Card {...props} />);
   });
 
   it('should save a snapshot of the component', () => {

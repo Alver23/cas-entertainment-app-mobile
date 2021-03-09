@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArtistDetail /> should save a snapshot of the component 1`] = `
+<LayoutView
+  style={
+    Object {
+      "flex": 1,
+      "paddingHorizontal": 16,
+    }
+  }
+>
+  <ArtistDetail
+    id={1}
+  />
+</LayoutView>
+`;
